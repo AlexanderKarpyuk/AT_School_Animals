@@ -3,6 +3,9 @@ package Zoo;
 import Animals.*;
 import Food.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Zoo {
     public static void main(String[] args) {
         //Создаём хранилище с едой.
@@ -30,5 +33,22 @@ public class Zoo {
         for (int i = 0; i < aviaryHerbivore2.getSize(); i++) {
             aviaryHerbivore2.addAnimal(new Giraffe());
         }
+
+        //Заносим вольеры в список, чтобы было проще с ними работать
+        List<Aviary> aviaries = new ArrayList<Aviary>();
+        aviaries.add(aviaryHerbivore1);
+        aviaries.add(aviaryHerbivore2);
+        aviaries.add(aviaryCarnivorous1);
+        aviaries.add(aviaryCarnivorous2);
+
+        //Стажёру поручено покормить животных,но он может ошибиться и дать им не то что нужно.
+        for (Aviary aviary : aviaries) {
+            for (int i = 0; i < aviary.getSize(); i++) {
+                int random = (int) (Math.random() * foods.length);
+                Animal animal = aviary.getAnimalByIndex(i);
+                animal.eat(foods[random]);
+            }
+        }
+
     }
 }

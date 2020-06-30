@@ -6,6 +6,7 @@ package Animals;
  * И в вольер её не нужен.
  */
 public class Duck {
+    private String name = "Утка";
     private Duck duck;
 
     private Duck() {
@@ -17,5 +18,9 @@ public class Duck {
             duck = new Duck();
         }
         return duck;
+    }
+
+    public void say() {
+        System.out.println("Кря-кря");
     }
 }
