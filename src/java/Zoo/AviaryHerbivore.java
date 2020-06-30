@@ -11,7 +11,7 @@ import java.util.List;
 public class AviaryHerbivore implements Aviary {
     private List<Herbivore> animals = new ArrayList<>();
     private int size;
-    private int count = animals.size();
+    private int count;
 
     public AviaryHerbivore(int size) {
         if (size > 0) {
@@ -35,6 +35,7 @@ public class AviaryHerbivore implements Aviary {
     public void addAnimal(Animal animal) {
         if (size > animals.size() && animal instanceof Herbivore) {
             animals.add((Herbivore) animal);
+            count = animals.size();
         } else {
             System.out.println("В вольере нету места");
         }

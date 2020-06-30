@@ -7,13 +7,13 @@ package Animals;
  */
 public class Duck {
     private String name = "Утка";
-    private Duck duck;
+    private static Duck duck;
 
     private Duck() {
 
     }
 
-    public Duck getInstance() {
+    public static Duck getInstance() {
         if (duck == null) {
             duck = new Duck();
         }
