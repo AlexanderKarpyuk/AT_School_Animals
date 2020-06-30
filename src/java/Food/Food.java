@@ -4,5 +4,10 @@ package Food;
  * Супер класс еда.
  */
 public abstract class Food {
-    public abstract String getName();
+    protected String name;
+
+    @Override
+    public String toString() {
+        return name;
+    }
 }

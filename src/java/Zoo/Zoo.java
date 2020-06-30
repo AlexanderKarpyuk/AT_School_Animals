@@ -48,8 +48,8 @@ public class Zoo {
                 int random = (int) (Math.random() * foods.length);
                 Food food = foods[random];
                 Animal animal = aviary.getAnimalByIndex(i);
-                System.out.println("Работник зоопарка для " + animal.getName() + " наложил еды: "
-                        + food.getName());
+                System.out.println("Работник зоопарка для " + animal + " наложил еды: "
+                        + food);
                 animal.eat(food);
             }
         }
