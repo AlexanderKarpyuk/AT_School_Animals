@@ -1,8 +1,9 @@
 package Animals;
 
-import Food.*;
 
 public class Giraffe extends Herbivore {
+    protected static int count;
+
     public Giraffe() {
         count++;
         name = "Жираф №" + count;
