@@ -57,8 +57,9 @@ public class Zoo {
         //Так же не забыли про уточку
         Duck duck = Duck.getInstance();
         System.out.println();
-        System.out.println("Прилетела утка");
+        System.out.println("Прилетела утка.");
         duck.say();
-
+        System.out.println("Сотрудник пытается поймать утку, но безуспешно");
+        duck.say();
     }
 }
