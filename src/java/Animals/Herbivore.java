@@ -3,7 +3,7 @@ package Animals;
 import Food.Food;
 
 /**
- * Класс травоядное
+ * Класс травоядное.
  */
 public abstract class Herbivore extends Animal {
     @Override

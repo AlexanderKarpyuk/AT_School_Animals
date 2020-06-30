@@ -1,7 +1,7 @@
 package Food;
 
 /**
- * Супер класс еда
+ * Супер класс еда.
  */
 public abstract class Food {
 }

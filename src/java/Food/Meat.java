@@ -1,7 +1,7 @@
 package Food;
 
 /**
- * Класс мясо
+ * Класс мясо.
  */
 public abstract class Meat extends Food {
 }
