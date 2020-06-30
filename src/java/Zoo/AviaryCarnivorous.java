@@ -9,6 +9,7 @@ import java.util.List;
 public class AviaryCarnivorous implements Aviary {
     private List<Carnivorous> animals = new ArrayList<>();
     private int size;
+    private int count = animals.size();
 
     public AviaryCarnivorous(int size) {
         if (size > 0) {
@@ -18,10 +19,17 @@ public class AviaryCarnivorous implements Aviary {
         }
     }
 
+    @Override
     public int getSize() {
         return size;
     }
 
+    @Override
+    public int getCount() {
+        return count;
+    }
+
+    @Override
     public void addAnimal(Animal animal) {
         if (size > animals.size() && animal instanceof Carnivorous) {
             animals.add((Carnivorous) animal);
@@ -30,6 +38,7 @@ public class AviaryCarnivorous implements Aviary {
         }
     }
 
+    @Override
     public Animal getAnimalByIndex(int index) {
         if (0 <= index && index < size) {
             return animals.get(index);

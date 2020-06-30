@@ -43,7 +43,7 @@ public class Zoo {
 
         //Стажёру поручено покормить животных,но он может ошибиться и дать им не то что нужно.
         for (Aviary aviary : aviaries) {
-            for (int i = 0; i < aviary.getSize(); i++) {
+            for (int i = 0; i < aviary.getCount(); i++) {
                 int random = (int) (Math.random() * foods.length);
                 Animal animal = aviary.getAnimalByIndex(i);
                 animal.eat(foods[random]);
