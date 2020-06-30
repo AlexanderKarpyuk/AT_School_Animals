@@ -1,5 +1,6 @@
 package Zoo;
 
+import Animals.Animal;
 import Animals.Carnivorous;
 
 import java.util.ArrayList;
@@ -17,11 +18,26 @@ public class AviaryCarnivorous {
         }
     }
 
+    public int getSize() {
+        return size;
+    }
+
     public void addAnimal(Carnivorous animal) {
         if (size > animals.size()) {
             animals.add(animal);
         } else {
             System.out.println("В вольере нету места");
         }
+    }
+
+    public Animal getAnimalByIndex(int index) {
+        if (0 <= index && index < size) {
+            return animals.get(index);
+        } else if (index < 0) {
+            System.out.println("Индекс не может быть меньше нуля");
+        } else {
+            System.out.println("Животного с таким идексом нету");
+        }
+        return null;
     }
 }
