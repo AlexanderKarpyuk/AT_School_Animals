@@ -1,5 +1,6 @@
 package Animals;
 
+import Exceptions.WrongFoodException;
 import Food.*;
 
 /**
@@ -7,11 +8,11 @@ import Food.*;
  */
 public abstract class Carnivorous extends Animal {
     @Override
-    public void eat(Food food) {
+    public void eat(Food food) throws WrongFoodException {
         if (food instanceof Meat) {
             System.out.println(name + " ест: " + food);
         } else {
-            System.out.println(name + " не ест такую еду");
+            throw new WrongFoodException(name + " не ест такую еду");
         }
     }
 }
