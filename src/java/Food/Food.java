@@ -3,11 +3,25 @@ package Food;
 /**
  * Супер класс еда.
  */
-public abstract class Food {
-    protected String name;
+public enum Food {
+    BEEF("Говядина", false),
+    BULL("Мясо быка", false),
+    GRASS("Трава", false),
+    CARROT("Морковь", false);
 
-    @Override
-    public String toString() {
-        return name;
+    private final String title;
+    private final boolean isVegetable;
+
+    Food(String title, boolean isVegetable) {
+        this.title = title;
+        this.isVegetable = isVegetable;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public boolean isVegetable() {
+        return isVegetable;
     }
 }
