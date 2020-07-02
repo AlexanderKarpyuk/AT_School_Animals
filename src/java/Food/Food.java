@@ -17,6 +17,13 @@ public enum Food {
         this.isVegetable = isVegetable;
     }
 
+    public String getTitle() {
+        return title;
+    }
+
+    public boolean isVegetable() {
+        return isVegetable;
+    }
 
     @Override
     public String toString() {

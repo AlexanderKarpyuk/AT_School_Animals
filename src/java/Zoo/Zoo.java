@@ -10,7 +10,7 @@ import java.util.List;
 public class Zoo {
     public static void main(String[] args) {
         //Создаём хранилище с едой.
-        Food[] foods = new Food[] {new Beef(), new Carrot(), new Grass(), new Bull()};
+        Food[] foods = Food.values();
 
         //Создаём вольеры и указываем их размеры.
         AviaryCarnivorous aviaryCarnivorous1 = new AviaryCarnivorous(5);

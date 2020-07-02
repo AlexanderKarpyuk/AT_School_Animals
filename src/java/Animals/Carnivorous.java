@@ -9,7 +9,7 @@ import Food.*;
 public abstract class Carnivorous extends Animal {
     @Override
     public void eat(Food food) throws WrongFoodException {
-        if (food instanceof Meat) {
+        if (!food.isVegetable()) {
             System.out.println(name + " ест: " + food);
         } else {
             throw new WrongFoodException(name + " не ест такую еду");
