@@ -1,4 +1,4 @@
-package Animals;
+package ru.lanit.zoo.animals;
 
 
 /**

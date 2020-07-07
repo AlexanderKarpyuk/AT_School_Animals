@@ -1,4 +1,4 @@
-package Food;
+package ru.lanit.zoo.food;
 
 /**
  * Перечисление видов еды для животных зоопарка.

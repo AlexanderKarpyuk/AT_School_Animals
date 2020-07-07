@@ -1,7 +1,7 @@
-package Animals;
+package ru.lanit.zoo.animals;
 
-import Exceptions.WrongFoodException;
-import Food.Food;
+import ru.lanit.zoo.exceptions.WrongFoodException;
+import ru.lanit.zoo.food.Food;
 
 /**
  * Супер класс животное.

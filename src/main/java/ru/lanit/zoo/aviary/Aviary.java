@@ -1,6 +1,6 @@
-package Zoo;
+package ru.lanit.zoo.aviary;
 
-import Animals.Animal;
+import ru.lanit.zoo.animals.Animal;
 
 public interface Aviary {
     int getSize();

@@ -1,8 +1,11 @@
-package Zoo;
+package ru.lanit.zoo;
 
-import Animals.*;
-import Exceptions.WrongFoodException;
-import Food.*;
+import ru.lanit.zoo.animals.*;
+import ru.lanit.zoo.aviary.Aviary;
+import ru.lanit.zoo.aviary.AviaryCarnivorous;
+import ru.lanit.zoo.aviary.AviaryHerbivore;
+import ru.lanit.zoo.exceptions.WrongFoodException;
+import ru.lanit.zoo.food.Food;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,7 +39,7 @@ public class Zoo {
         }
 
         //Заносим вольеры в список, чтобы было проще с ними работать
-        List<Aviary> aviaries = new ArrayList<Aviary>();
+        List<Aviary> aviaries = new ArrayList<>();
         aviaries.add(aviaryHerbivore1);
         aviaries.add(aviaryHerbivore2);
         aviaries.add(aviaryCarnivorous1);
