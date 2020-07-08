@@ -95,7 +95,27 @@ public class Zoo {
         duck.say();
         System.out.println("Сотрудник пытается поймать утку, но безуспешно");
         duck.say();
+
+        //Добавляем охраннику +1 отработанный день и сохраняем в файл
+        loggerConsole.info("Перезаписываем изменённый обьект");
+        loggerFile.info("Перезаписываем изменённый обьект");
+        try (FileWriter writer = new FileWriter("employee.json"))
+        {
+            if (security != null) {
+                security.setDays(security.getDays() + 1);
+                gson.toJson(security, writer);
+                writer.flush();
+            } else {
+                throw new IOException();
+            }
+        } catch (IOException e) {
+            loggerConsole.error("Не удалось сохранить обьект");
+            loggerFile.error("Не удалось сохранить обьект");
+        }
     }
+
+
+
 
 
     private static List<Aviary> getListAviary() {
