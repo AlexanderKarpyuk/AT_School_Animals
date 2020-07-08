@@ -1,6 +1,7 @@
-package Animals;
+package ru.lanit.zoo.animals;
 
-import Food.Food;
+import ru.lanit.zoo.exceptions.WrongFoodException;
+import ru.lanit.zoo.food.Food;
 
 /**
  * Супер класс животное.
@@ -8,7 +9,7 @@ import Food.Food;
 public abstract class Animal {
     protected String name;
 
-    public abstract void eat(Food food);
+    public abstract void eat(Food food) throws WrongFoodException;
 
     public abstract String getName();
 

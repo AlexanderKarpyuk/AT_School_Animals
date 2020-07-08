@@ -1,17 +1,18 @@
-package Zoo;
+package ru.lanit.zoo.aviary;
 
-import Animals.Animal;
-import Animals.Carnivorous;
+
+import ru.lanit.zoo.animals.Animal;
+import ru.lanit.zoo.animals.Herbivore;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class AviaryCarnivorous implements Aviary {
-    private List<Carnivorous> animals = new ArrayList<>();
+public class AviaryHerbivore implements Aviary {
+    private List<Herbivore> animals = new ArrayList<>();
     private int size;
     private int count;
 
-    public AviaryCarnivorous(int size) {
+    public AviaryHerbivore(int size) {
         if (size > 0) {
             this.size = size;
         } else {
@@ -31,8 +32,8 @@ public class AviaryCarnivorous implements Aviary {
 
     @Override
     public void addAnimal(Animal animal) {
-        if (size > animals.size() && animal instanceof Carnivorous) {
-            animals.add((Carnivorous) animal);
+        if (size > animals.size() && animal instanceof Herbivore) {
+            animals.add((Herbivore) animal);
             count = animals.size();
         } else {
             System.out.println("В вольере нету места");

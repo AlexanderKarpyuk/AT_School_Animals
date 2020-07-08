@@ -1,4 +1,4 @@
-package Animals;
+package ru.lanit.zoo.animals;
 
 
 /**
@@ -8,6 +8,8 @@ package Animals;
 public class Duck {
     private String name = "Утка";
     private static Duck duck;
+    private String post = "Директор";
+    private String age = "8";
 
     private Duck() {
 

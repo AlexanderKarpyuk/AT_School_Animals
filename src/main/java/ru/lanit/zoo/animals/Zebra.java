@@ -1,16 +1,17 @@
-package Animals;
+package ru.lanit.zoo.animals;
 
 
-public class Giraffe extends Herbivore {
+public class Zebra extends Herbivore {
     protected static int count;
 
-    public Giraffe() {
+    public Zebra() {
         count++;
-        name = "Жираф №" + count;
+        name = "Зебра №" + count;
     }
 
     @Override
     public String getName() {
         return name;
     }
+
 }
