@@ -7,7 +7,6 @@ import ru.lanit.zoo.aviary.AviaryCarnivorous;
 import ru.lanit.zoo.aviary.AviaryHerbivore;
 import ru.lanit.zoo.exceptions.WrongFoodException;
 import ru.lanit.zoo.food.Food;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -50,7 +49,6 @@ public class Zoo {
         //Так же не забыли про уточку
         loggerConsole.info("Вызываем уточку");
         loggerFile.info("Вызываем уточку");
-
         Duck duck = Duck.getInstance();
         System.out.println();
         System.out.println("Прилетела утка.");
